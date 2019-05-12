@@ -1,0 +1,52 @@
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ooh-Deteru</title>
+    <link rel="stylesheet" type="text/css" href="css/ooo.css">
+    <script>
+            function sound()
+            {
+                // 対象となるID名
+                var id = 'sound' ;
+                // 初回以外だったら音声ファイルを巻き戻す
+                if( typeof( document.getElementById( id ).currentTime ) != 'undefined' )
+                {
+                    document.getElementById( id ).currentTime = 0;
+                }
+                // [ID:sound-file]の音声ファイルを再生[play()]する
+                document.getElementById( id ).play() ;
+            }
+
+            function sound2()
+            {
+                // 対象となるID名
+                var id = 'sound2' ;
+                // 初回以外だったら音声ファイルを巻き戻す
+                if( typeof( document.getElementById( id ).currentTime ) != 'undefined' )
+                {
+                    document.getElementById( id ).currentTime = 0;
+                }
+                // [ID:sound-file]の音声ファイルを再生[play()]する
+                document.getElementById( id ).play() ;
+            }
+            </script>
+</head>
+<body>
+
+<div class="wrap">
+
+<p class="btn"><a onclick="sound()">おぉあ…♥</a></p>
+<audio id="sound" preload="auto">
+    <source src="audio/ooh.wav" type="audio/wav">
+</audio>
+
+
+<p class="btn"><a onclick="sound2()">出てるぅ</a></p>
+<audio id="sound2" preload="auto">
+    <source src="audio/deteru.wav" type="audio/wav">
+    </div>
+</body>
+</html>
